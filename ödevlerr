@@ -1,0 +1,79 @@
+#1-Kullanıcının girdiği boy ve ağırlık değerlerine göre vücut kitle indeksini (VKİ = ağırlık/(boy*boy)) hesaplayınız.
+
+# Kullanıcıdan boy ve ağırlık girdisini alınması (boy santimetre cinsinden)
+boycm = int(input("Lütfen boyunuzu (santimetre cinsinde) girin: "))
+ağirlik = int(input("Lütfen ağırlığınızı (kilogram cinsinde) girin: "))
+
+# Boyun metre cinsine dönüştürülmesi
+boym = boycm / 100
+
+# VKİ hesaplaması
+vki = ağirlik / (boym * boym)
+
+# Sonucun ekrana yazdırılması
+print("Vücut Kitle İndeksiniz (VKİ):", vki) 
+
+#2-Maaşı ve zam oranı girilen işçinin zamlı maaşını hesaplayarak ekranda gösteriniz.
+
+# Kullanıcıdan mevcut maaş ve zam oranı girdilerini alınması
+maas = float(input("Mevcut maaşı girin: "))
+zamorani = float(input("Zam oranını girin (% olarak): "))
+
+# Zamlı maaşın hesaplanması
+zamlimaas = maas * (1 + zamorani / 100)
+
+# Sonucun ekrana yazdırılması
+print("Zamlı maaş:", zamlimaas)
+
+#3-Kullanıcının girdiği üç sayı arasında en büyük olanı bulan ve sonucu yazdıran bir program yazınız.
+
+# Kullanıcıdan üç sayı girmesini istenmesi
+sayi1 = float(input("Birinci sayıyı girin: "))
+sayi2 = float(input("İkinci sayıyı girin: "))
+sayi3 = float(input("Üçüncü sayıyı girin: "))
+
+# En büyük sayının bulunması
+
+enbüyük = sayi1
+
+if sayi2 > sayi1:
+    enbüyük = sayi2
+
+if sayi3 > sayi2:
+    enbüyük = sayi3
+
+# Sonucun ekrana yazdırılması
+print("En büyük sayı:", enbüyük)
+
+
+#4-Dairenin alanını ve çevresini hesaplayan python kodunu yazınız.(Dairenin yarıçapını kullanıcıdan alınız)
+
+
+# Kullanıcıdan dairenin yarıçapını girmesini istenmesi
+yariçap = float(input("Dairenin yarıçapını girin: "))
+
+# Dairenin alanının hesaplanması
+import math
+alan = math.pi * yariçap ** 2
+
+# Dairenin çevresinin hesaplanması
+çevre = 2 * math.pi * yariçap
+
+# Sonuçların ekrana yazdırılması
+print("Dairenin Alanı:", alan)
+print("Dairenin Çevresi:", çevre)
+
+#5-Kullanıcıdan alınan bir sayının palindrom olup olmadığını bulan bir program yazınız.
+
+# Kullanıcıdan bir sayı girmesini isteyin
+sayi = (input("Bir sayı girin: "))
+
+# Girilen sayının tersini alın
+terssayi = sayi[::-1]
+
+# Palindrom kontrolü
+if sayi == terssayi:
+    print("Girilen sayı bir palindromdur.")
+else:
+    print("Girilen sayı bir palindrom değildir. ") 
+
